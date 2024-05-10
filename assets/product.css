@@ -1,0 +1,25 @@
+.c-product--title {
+    color: #000;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 28px;
+    line-height: 1.1;
+    margin: 0 0 30px;
+    padding: 0;
+}
+.c-product--title h1 {
+    font-weight: 600 !important;
+    font-size: 28px;
+    color: black;
+}
+@media screen and (min-width: 990px) {
+    .product--large:not(.product--no-media) .product__media-wrapper {
+      max-width: 50%;
+      width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+  
+    .product--large:not(.product--no-media) .product__info-wrapper {
+      padding: 0 0 0 4rem;
+      max-width: 50%;
+      width: calc(50% - var(--grid-desktop-horizontal-spacing) / 2);
+    }
+}
