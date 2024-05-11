@@ -102,8 +102,14 @@
                 </div>
 
                 {% for collection in product.collections %}
-                  <p class="collection-title">{{ collection.title }}</p>
+                  <p class="collection-title c-collection--title">{{ collection.title }}</p>
                 {% endfor %}
+
+                <div class="product-reviews-summary empty">
+                    <div class="reviews-actions">
+                        <a class="c-review-popup-link" id="review-popup-link" href="javascript:void(0)">Leave a review</a>
+                    </div>
+                </div>
                 
               {%- when 'price' -%}
                 <div id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
@@ -119,7 +125,7 @@
                     <span>{{ 'products.product.volume_pricing.note' | t }}</span>
                   </div>
                 {%- endif -%}
-                <div class="product__tax caption rte">
+                <div class="product__tax caption rte c-display-none">
                   {%- if cart.taxes_included -%}
                     {{ 'products.product.include_taxes' | t }}
                   {%- endif -%}
@@ -134,6 +140,7 @@
                     {{ form | payment_terms }}
                   {%- endform -%}
                 </div>
+                {%  when 'helpmodal' %}
               {%- when 'inventory' -%}
                 <p
                   class="product__inventory{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -790,6 +797,10 @@
           "label": "t:sections.main-product.blocks.text.settings.text_style.label"
         }
       ]
+    },
+    {
+      "type": "helpmodal",
+      "name": "t:sections.main-product.blocks.helpmodal.name"
     },
     {
       "type": "title",

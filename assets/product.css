@@ -11,6 +11,30 @@
     font-size: 28px;
     color: black;
 }
+.c-collection--title {
+  font-size: 18px;
+  color: #888 !important;
+  font-weight: 400;
+  line-height: 1.4;
+  padding: 0;
+}
+.c-price--position {
+  justify-content: flex-start !important;
+}
+.c-display-none {
+  display: none !important;
+}
+.c-price--right_border {
+  border-right: 1px solid #ddd;
+}
+.c-review-popup-link {
+  color: #000;
+  text-decoration: none;
+}
+.c-review-popup-link:hover {
+  color: #f5ae34;
+  text-decoration: underline;
+}
 @media screen and (min-width: 990px) {
     .product--large:not(.product--no-media) .product__media-wrapper {
       max-width: 50%;
